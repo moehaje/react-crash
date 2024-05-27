@@ -7,5 +7,12 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0', // Set to your local IP address
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
