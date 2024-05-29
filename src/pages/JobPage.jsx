@@ -9,7 +9,6 @@ const JobPage = ({ deleteJob }) => {
 
   const onDeleteClick = (jobId) => {
     const confirm = window.confirm('Are you sure you want to delete this listing?')
-
     if (!confirm) {
       return 
     }
@@ -41,7 +40,6 @@ const JobPage = ({ deleteJob }) => {
                 <p className="text-orange-700">{job.location}</p>
               </div>
             </div>
-            
             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
                 <h3 className="text-indigo-800 text-lg font-bold mb-6"> Job Description </h3>
                 <p className="mb-4">
@@ -51,7 +49,6 @@ const JobPage = ({ deleteJob }) => {
                 <p className="mb-4">{ job.salary } / Year</p>
             </div>
           </main>
-
           <aside>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-bold mb-6">Company Info</h3>
@@ -67,7 +64,6 @@ const JobPage = ({ deleteJob }) => {
               <h3 className="text-xl">Contact Phone:</h3>
               <p className="my-2 bg-indigo-100 p-2 font-bold">{ job.company.contactPhone }</p>
             </div>
-
             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
                 <h3 className="text-xl font-bold mb-6">Manage Job</h3>
                 <Link to={`/edit-job/${job.id}`} className="bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
